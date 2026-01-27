@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (DO NOT PUSH)
+data/
+dataset/
+datasets/
+
+# Trained models (DO NOT PUSH)
+*.pt
+*.pth
+*.h5
+*.ckpt
+
+# Archives
+*.zip
+*.tar
+*.gz
