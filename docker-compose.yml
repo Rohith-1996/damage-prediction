@@ -1,0 +1,16 @@
+services:
+  fastapi-server:
+    image: rohithreddy96/car-damage-backend:v1
+    ports:
+      - "8000:8000"
+
+  streamlit-app:
+    image: rohithreddy96/car-damage-frontend:v1
+    ports:
+      - "8501:8501"
+    environment:
+      # "fastapi-server" here = the service name above. Compose's internal
+      # DNS resolves it to that container's IP automatically.
+      - BACKEND_URL=http://fastapi-server:8000
+    depends_on:
+      - fastapi-server
